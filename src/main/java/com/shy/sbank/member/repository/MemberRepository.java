@@ -1,8 +1,8 @@
-package com.shy.sbank.Member;
+package com.shy.sbank.member.repository;
 
+import com.shy.sbank.member.entity.Member;
 import org.springframework.stereotype.Repository;
 
-import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.UUID;
