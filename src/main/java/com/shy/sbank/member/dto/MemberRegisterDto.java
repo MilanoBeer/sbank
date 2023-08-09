@@ -13,7 +13,7 @@ import javax.validation.constraints.Size;
 @Getter
 @Setter
 @NoArgsConstructor  // (access = AccessLevel.PROTECTED)
-public class MemberRegisterRequestDto {
+public class MemberRegisterDto {
 
     @NotBlank(message = "이름을 작성해주세요.")
     private String name;
@@ -27,7 +27,7 @@ public class MemberRegisterRequestDto {
     private String password;
 
     @Builder
-    public MemberRegisterRequestDto(String name, String email, String password) {
+    public MemberRegisterDto(String name, String email, String password) {
         this.name = name;
         this.email = email;
         this.password = password;
