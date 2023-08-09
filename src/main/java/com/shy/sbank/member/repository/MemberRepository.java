@@ -18,8 +18,15 @@ public class MemberRepository {
         return member.getId();
     }
 
-    public Member find(UUID id) {
+    public Member findById(UUID id) {
         return em.find(Member.class, id);
+    }
+
+    // MemberService : login method
+    public Member findByEmail(String email){
+        return em.createQuery("select m from Member m where m.email = :email", Member.class)
+                .setParameter("email", email)
+                .getSingleResult();
     }
 
 }
