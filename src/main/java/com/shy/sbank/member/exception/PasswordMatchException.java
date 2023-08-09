@@ -6,7 +6,6 @@ public class PasswordMatchException extends RuntimeException{
     public PasswordMatchException() {
         super();
     }
-
     // 메세지 출력 용도
     public PasswordMatchException(String message) {
         super(message);
