@@ -5,7 +5,6 @@ import com.shy.sbank.member.dto.MemberRegisterDto;
 import com.shy.sbank.member.entity.Member;
 import com.shy.sbank.member.exception.PasswordMatchException;
 import com.shy.sbank.member.repository.MemberRepository;
-import com.shy.sbank.member.repository.MemberRepository_old;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.mindrot.jbcrypt.BCrypt;
