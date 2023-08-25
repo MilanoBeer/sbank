@@ -3,7 +3,6 @@ package com.shy.sbank;
 
 import com.shy.sbank.member.entity.Member;
 import com.shy.sbank.member.repository.MemberRepository;
-import com.shy.sbank.member.repository.MemberRepository_old;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
