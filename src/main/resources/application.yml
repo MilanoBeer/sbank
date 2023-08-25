@@ -7,10 +7,11 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     properties:
       hibernate:
-#        show-sql: true
+        show-sql: true
         format_sql: true
-  logging.level:
-    org.hibernate.SQL: debug
+        default_batch_fetch_size: 1000 #최적화 옵션
+logging.level:
+  org.hibernate.SQL: debug
