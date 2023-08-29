@@ -22,7 +22,7 @@ public class Account {
     private Long id;
 
     // ManyToOne : -> EAGER이 기본형 / OneToMany : -> LAZY / Many로 가져올 대상이 많아서..
-    @ManyToOne(fetch = FetchType.LAZY) //
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="member_id")
     private Member member;
 
@@ -60,7 +60,6 @@ public class Account {
         this.createYmdt = createYmdt;
         this.expireYmdt = expireYmdt;
     }
-
 
     public void updateBalance(Double balance){
         this.balance = balance;

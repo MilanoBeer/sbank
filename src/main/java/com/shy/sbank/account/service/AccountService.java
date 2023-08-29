@@ -31,19 +31,15 @@ public class AccountService {
     // 계좌 등록
     public boolean register(AccountRegisterRequestDto dto) {
 
-        // 1. Member 정보 조회
         Member member = memberRepository.findById(dto.getMemberId())
                 .orElseThrow(()-> new EntityNotFoundException("존재하지 않는 사용자입니다."));
 
-        // 2. dto로부터 기간정보 받아서 expireYmdt계산해서 설정하기
         LocalDateTime currentYmdt = LocalDateTime.now();
         LocalDateTime expireYmdt = LocalDateTime.parse(dto.getExpireYmdt());
 
-        // 3. product찾아오기
         Product product = productRepository.findById(dto.getProductId())
                 .orElseThrow(() -> new IllegalStateException("해당 상품 정보가 존재하지 않습니다."));
 
-        // 4. Account 생성
         Account account = Account.builder()
                 .member(member)
                 .accountName(dto.getAccountName())
@@ -53,7 +49,6 @@ public class AccountService {
                 .product(product)
                 .build();
 
-        // 등록
         accountRepository.save(account);
         return true;
     }
@@ -73,20 +68,14 @@ public class AccountService {
         Account account = accountRepository.findByIdAndMemberId(dto.getAccountId(), dto.getMemberId());
         account.updateBalance(account.getBalance() + dto.getMoney());
 
-        // 수정된 account 저장
         accountRepository.save(account);
-
         return true;
     }
 
     // A멤버 -> B멤버의 account에 대한 입금
     public boolean remitMoney(RemitAccountRequestDto dto) {
-        // 송신자
-        // 송신자 ->
         Account senderAccount = accountRepository.findByIdAndMemberId(dto.getSenderAccountId(), dto.getSenderId());
 
-//         수신자
-//         수신자계좌가 없는 경우
         Account receiverAccount = accountRepository.findByIdAndMemberId(dto.getReceiverAccountId(),dto.getReceiverId());
 
         // 입금처리 // TODO : 돈 따라서 예외처리

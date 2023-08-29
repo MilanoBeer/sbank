@@ -18,8 +18,6 @@ import java.util.UUID;
 @NoArgsConstructor
 public class AccountRegisterRequestDto {
 
-    // 요청 -> 사용자 id, 계좌이름, 만기일 날짜,
-
     private UUID memberId;
     private Long productId;
 
