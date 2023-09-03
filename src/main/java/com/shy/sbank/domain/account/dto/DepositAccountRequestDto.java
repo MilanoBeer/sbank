@@ -1,4 +1,4 @@
-package com.shy.sbank.account.dto;
+package com.shy.sbank.domain.account.dto;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -8,14 +8,12 @@ import java.util.UUID;
 @Getter
 @NoArgsConstructor
 public class DepositAccountRequestDto {
-    // memberId
+
     private UUID memberId;
 
-    // accoutId
     private Long accountId;
 
-    // money : "Big Decimal" / 2진수, 1 + 1 = 3
-    // 10 -> 2 금액오차 /
+    // TODO :  money : "Big Decimal" / 2진수, 1 + 1 = 3 // 10 -> 2 금액오차 /
     private Double money;
 
     @Builder

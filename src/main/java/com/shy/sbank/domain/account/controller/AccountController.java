@@ -1,11 +1,10 @@
-package com.shy.sbank.account.controller;
+package com.shy.sbank.domain.account.controller;
 
-import com.shy.sbank.account.dto.AccountRegisterRequestDto;
-import com.shy.sbank.account.dto.DepositAccountRequestDto;
-import com.shy.sbank.account.dto.GetAccountListRequestDto;
-import com.shy.sbank.account.dto.RemitAccountRequestDto;
-import com.shy.sbank.account.repository.AccountRepository;
-import com.shy.sbank.account.service.AccountService;
+import com.shy.sbank.domain.account.dto.AccountRegisterRequestDto;
+import com.shy.sbank.domain.account.dto.DepositAccountRequestDto;
+import com.shy.sbank.domain.account.dto.GetAccountListRequestDto;
+import com.shy.sbank.domain.account.dto.RemitAccountRequestDto;
+import com.shy.sbank.domain.account.service.AccountService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -27,7 +26,6 @@ public class AccountController {
 
     @PostMapping("/register")
     public ResponseEntity<?> register(@RequestBody @Validated AccountRegisterRequestDto dto) {
-        // service layer에 요청하기
         try {
             return new ResponseEntity<>(accountService.register(dto), HttpStatus.OK);
         } catch (IllegalStateException e) {

@@ -1,12 +1,10 @@
-package com.shy.sbank.account.entity;
+package com.shy.sbank.domain.account.entity;
 
-import com.shy.sbank.member.entity.Member;
-import com.shy.sbank.product.entity.Product;
+import com.shy.sbank.domain.member.entity.Member;
+import com.shy.sbank.domain.product.entity.Product;
 import lombok.*;
-import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.DynamicInsert;
 import org.springframework.data.annotation.CreatedDate;
-
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
@@ -21,12 +19,10 @@ public class Account {
     @Column(name = "account_id", nullable = false)
     private Long id;
 
-    // ManyToOne : -> EAGER이 기본형 / OneToMany : -> LAZY / Many로 가져올 대상이 많아서..
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="member_id")
     private Member member;
 
-    // Product객체를 지연로딩으로 설정 -> 실제로 Account타고, Product를 조회할때 쿼리날라감
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "product_id")
     private Product product;

@@ -1,11 +1,9 @@
-package com.shy.sbank.account.dto;
+package com.shy.sbank.domain.account.dto;
 
-import com.shy.sbank.product.entity.Product;
-import com.shy.sbank.product.entity.ProductType;
+import com.shy.sbank.domain.product.entity.Product;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.DynamicInsert;
 
 import java.time.LocalDateTime;
 
@@ -14,7 +12,6 @@ import java.time.LocalDateTime;
 public class GetAccountListResponseDto {
     // 계좌정보 조회해오는데 필요한 정보들 선언
     private Long id;
-//    private ProductType productType;
     private Product product;
     private LocalDateTime createYmdt;
     private LocalDateTime expireYmdt;
