@@ -4,6 +4,15 @@ spring:
     url: jdbc:mysql://localhost:3306/cbank_db?serverTimezone=Asia/Seoul
     username: root
     password: hyhy
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      authentication-database: admin
+      username: hyhy
+      password: Gosan1997
+#      uri: mongodb://localhost:27017/cbank
+      database: cbank
 
   jpa:
     hibernate:
