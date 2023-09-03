@@ -1,11 +1,8 @@
-package com.shy.sbank.product.entity;
+package com.shy.sbank.domain.product.entity;
 
-import com.shy.sbank.account.entity.Account;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
-import org.springframework.data.repository.cdi.Eager;
 
 import javax.persistence.*;
 
@@ -18,8 +15,6 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "product_id")
     private Long id;
-    // 하나의 account는 하나의 product
-    // account에서 product_type을 통해
 
     @Column(name = "product_name")
     private String productName;

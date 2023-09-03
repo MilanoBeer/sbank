@@ -1,7 +1,7 @@
-package com.shy.sbank.product.controller;
+package com.shy.sbank.domain.product.controller;
 
-import com.shy.sbank.product.dto.ProductRegisterRequestDto;
-import com.shy.sbank.product.service.ProductService;
+import com.shy.sbank.domain.product.dto.ProductRegisterRequestDto;
+import com.shy.sbank.domain.product.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -11,8 +11,6 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import javax.validation.executable.ValidateOnExecution;
 
 @Controller
 @RequestMapping("/product")

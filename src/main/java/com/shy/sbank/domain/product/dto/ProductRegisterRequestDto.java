@@ -1,11 +1,9 @@
-package com.shy.sbank.product.dto;
+package com.shy.sbank.domain.product.dto;
 
-import com.shy.sbank.product.entity.Product;
-import com.shy.sbank.product.entity.ProductType;
+import com.shy.sbank.domain.product.entity.ProductType;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -14,7 +12,6 @@ import javax.persistence.Enumerated;
 @NoArgsConstructor
 public class ProductRegisterRequestDto {
 
-    // id, name, type, interest
     private String productName;
 
     @Enumerated(EnumType.STRING)

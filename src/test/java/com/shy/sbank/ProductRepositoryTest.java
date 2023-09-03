@@ -1,8 +1,8 @@
 package com.shy.sbank;
 
-import com.shy.sbank.product.entity.Product;
-import com.shy.sbank.product.entity.ProductType;
-import com.shy.sbank.product.repository.ProductRepository;
+import com.shy.sbank.domain.product.entity.Product;
+import com.shy.sbank.domain.product.entity.ProductType;
+import com.shy.sbank.domain.product.repository.ProductRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

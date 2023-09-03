@@ -1,4 +1,4 @@
-package com.shy.sbank.account.dto;
+package com.shy.sbank.domain.account.dto;
 
 
 import lombok.Builder;

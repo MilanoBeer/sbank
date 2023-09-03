@@ -1,6 +1,6 @@
-package com.shy.sbank.product.repository;
+package com.shy.sbank.domain.product.repository;
 
-import com.shy.sbank.product.entity.Product;
+import com.shy.sbank.domain.product.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,8 +1,8 @@
-package com.shy.sbank.product.service;
+package com.shy.sbank.domain.product.service;
 
-import com.shy.sbank.product.dto.ProductRegisterRequestDto;
-import com.shy.sbank.product.entity.Product;
-import com.shy.sbank.product.repository.ProductRepository;
+import com.shy.sbank.domain.product.dto.ProductRegisterRequestDto;
+import com.shy.sbank.domain.product.entity.Product;
+import com.shy.sbank.domain.product.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

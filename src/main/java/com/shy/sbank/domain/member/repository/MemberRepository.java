@@ -1,6 +1,6 @@
-package com.shy.sbank.member.repository;
+package com.shy.sbank.domain.member.repository;
 
-import com.shy.sbank.member.entity.Member;
+import com.shy.sbank.domain.member.entity.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

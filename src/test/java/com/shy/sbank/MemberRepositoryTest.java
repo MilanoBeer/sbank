@@ -1,16 +1,14 @@
 package com.shy.sbank;
 
 
-import com.shy.sbank.member.entity.Member;
-import com.shy.sbank.member.repository.MemberRepository;
+import com.shy.sbank.domain.member.entity.Member;
+import com.shy.sbank.domain.member.repository.MemberRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.UUID;
 
 @SpringBootTest
 public class MemberRepositoryTest {
