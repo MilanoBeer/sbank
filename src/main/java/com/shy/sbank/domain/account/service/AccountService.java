@@ -1,15 +1,15 @@
-package com.shy.sbank.account.service;
+package com.shy.sbank.domain.account.service;
 
-import com.shy.sbank.account.dto.AccountRegisterRequestDto;
-import com.shy.sbank.account.dto.DepositAccountRequestDto;
-import com.shy.sbank.account.dto.GetAccountListRequestDto;
-import com.shy.sbank.account.dto.RemitAccountRequestDto;
-import com.shy.sbank.account.entity.Account;
-import com.shy.sbank.account.repository.AccountRepository;
-import com.shy.sbank.member.entity.Member;
-import com.shy.sbank.member.repository.MemberRepository;
-import com.shy.sbank.product.entity.Product;
-import com.shy.sbank.product.repository.ProductRepository;
+import com.shy.sbank.domain.account.dto.AccountRegisterRequestDto;
+import com.shy.sbank.domain.account.dto.DepositAccountRequestDto;
+import com.shy.sbank.domain.account.dto.GetAccountListRequestDto;
+import com.shy.sbank.domain.account.dto.RemitAccountRequestDto;
+import com.shy.sbank.domain.account.entity.Account;
+import com.shy.sbank.domain.account.repository.AccountRepository;
+import com.shy.sbank.domain.member.entity.Member;
+import com.shy.sbank.domain.member.repository.MemberRepository;
+import com.shy.sbank.domain.product.entity.Product;
+import com.shy.sbank.domain.product.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
