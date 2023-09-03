@@ -1,10 +1,9 @@
-package com.shy.sbank.member.entity;
+package com.shy.sbank.domain.member.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.shy.sbank.account.entity.Account;
-import com.shy.sbank.account.entity.GroupAccount;
+import com.shy.sbank.domain.account.entity.Account;
+import com.shy.sbank.domain.groupaccount.entity.MemberGroupAccount;
 import lombok.*;
-import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
 
@@ -37,21 +36,16 @@ public class Member {
     @OneToMany(mappedBy = "member", fetch = FetchType.LAZY)
     private List<Account> account;
 
-    // GroupAccount - Member
-    // 1 : N
-    //
-    // 하나의 GroupAccount가 여러 명의 Member를 가질 수 있음
-    // 하나의 Member가 여러 개의 GroupAccount를 가질 수 있음
-    @OneToMany(mappedBy = "member", fetch = FetchType.LAZY)
-    private List<GroupAccount> groupAccount;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "member_group_account_id")
+    private MemberGroupAccount memberGroupAccount;
 
     @Builder
-    public Member(String name, String email, String password, List<Account> account, List<GroupAccount> groupAccount) {
+    public Member(String name, String email, String password, List<Account> account) {
         this.name = name;
         this.email = email;
         this.password = password;
         this.account = account;
-        this.groupAccount = groupAccount;
     }
 
 }
