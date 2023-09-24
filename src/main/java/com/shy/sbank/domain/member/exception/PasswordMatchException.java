@@ -1,4 +1,4 @@
-package com.shy.sbank.member.exception;
+package com.shy.sbank.domain.member.exception;
 
 // 언체크 예외 상속받기
 public class PasswordMatchException extends RuntimeException{
